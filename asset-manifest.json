@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ShopPink/static/css/main.2301b5dd.css",
+    "main.js": "/ShopPink/static/js/main.be2fe4e9.js",
+    "static/media/сердце-металла-робота-мотор-d-представить-136895020.jpg": "/ShopPink/static/media/сердце-металла-робота-мотор-d-представить-136895020.bfd36f4ef99d5946fbd7.jpg",
+    "static/media/istockphoto-1297460438-612x612.jpg": "/ShopPink/static/media/istockphoto-1297460438-612x612.e4d5d7192ecece2ab35b.jpg",
+    "static/media/check-circle-regular.svg": "/ShopPink/static/media/check-circle-regular.569b624a074abd910b734f03ea279462.svg",
+    "index.html": "/ShopPink/index.html",
+    "main.2301b5dd.css.map": "/ShopPink/static/css/main.2301b5dd.css.map",
+    "main.be2fe4e9.js.map": "/ShopPink/static/js/main.be2fe4e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2301b5dd.css",
+    "static/js/main.be2fe4e9.js"
+  ]
+}

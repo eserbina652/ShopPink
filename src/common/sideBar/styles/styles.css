@@ -1,0 +1,25 @@
+.dropdown-options {
+    top: 85px;
+    left: -45px;
+    background-color: #fce1e5;
+    border: 2px solid deeppink;
+    padding: 10px;
+    z-index: 3;
+}
+
+@media (max-width: 1024px) {
+    .dropdown-options {
+        left: -10px;
+    }
+}
+
+.dropdown-options li {
+    font-size: 18px;
+}
+
+.dropdown-options li:hover {
+    transition-duration: 1s;
+    font-size: 20px;
+    background-color: rgba(255, 20, 147, 0.53);
+    border-radius: 20px;
+}

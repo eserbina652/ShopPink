@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Products } from "../../api/productApi/types/productTypes";
-import ProductApi from "../../api/productApi/ProductApi";
-import Product from "../../common/productItem/Product";
-import { CategoryListWrap } from "./styles";
+import { Products } from "../api/productApi/types/productTypes";
+import ProductApi from "../api/productApi/ProductApi";
+import Product from "../common/productItem/Product";
+import { CategoryListWrap } from "../screens/categoryList/styles";
 
 const CategoryList = () => {
   const { state } = useLocation();

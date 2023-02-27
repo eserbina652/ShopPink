@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
-import BasketItem from "./BasketItem";
+import { useTypedSelector } from "../hooks/useTypedSelector";
+import BasketItem from "../screens/shopBasket/BasketItem";
 import { useDispatch } from "react-redux";
-import { onSave } from "../../store/reducers/basket";
-import { AllBasketWrapper, PriseForAll, Text, WrapForPrise } from "./style";
+import { onSave } from "../store/reducers/basket";
+import { AllBasketWrapper, PriseForAll, Text, WrapForPrise } from "../screens/shopBasket/style";
 
 const BasketList = () => {
   const user = useTypedSelector((state) => state.auth.user);

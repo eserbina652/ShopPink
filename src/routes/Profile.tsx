@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import ProductApi from "../../api/productApi/ProductApi";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
+import ProductApi from "../api/productApi/ProductApi";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 import {
   AllSearchProfileBox,
   ImageSearchProfile,
   ProfileWrapper,
   UserText,
   WrapSearchProfile,
-} from "./styles";
-import { InputSearch } from "../../common/search/styles";
-import { friends } from "../../assets";
-import { AllSearchedUser } from "../../common/search/searchedProduct/styles";
-import { User } from "../../api/usersApi/types/types";
-import SearchedUsers from "./SearchedUsers";
-import AboutUser from "../friend/additionalInformation/AboutUser";
+} from "../screens/profile/styles";
+import { InputSearch } from "../common/search/styles";
+import { friends } from "../assets";
+import { AllSearchedUser } from "../common/search/searchedProduct/styles";
+import { User } from "../api/usersApi/types/types";
+import SearchedUsers from "../screens/profile/SearchedUsers";
+import AboutUser from "../screens/friend/additionalInformation/AboutUser";
 import { useLocation } from "react-router-dom";
-import { onLogin } from "../../store/reducers/auth";
+import { onLogin } from "../store/reducers/auth";
 import { useDispatch } from "react-redux";
-import { Text } from "../shopBasket/style";
+import { Text } from "../screens/shopBasket/style";
 
 const Profile = () => {
   const user = useTypedSelector((state) => state.auth.user);

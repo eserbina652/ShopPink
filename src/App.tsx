@@ -1,33 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import {
-  Link,
   Route,
   Routes,
-  useLocation,
   useNavigate,
 } from "react-router-dom";
-import { Registration } from "./screens/Registration/Registration";
-import Home from "./screens/Home/Home";
+import { Registration } from "./routes/Registration";
+import Home from "./routes/Home";
 import { useDispatch } from "react-redux";
 import { onLogin } from "./store/reducers/auth";
 import { useTypedSelector } from "./hooks/useTypedSelector";
-import CategoryList from "./screens/categoryList/CategoryList";
-import ProductPage from "./screens/productPage/ProductPage";
+import CategoryList from "./routes/CategoryList";
+import ProductPage from "./routes/ProductPage";
 import { AllPagesWrapper, Header, HeaderLinks } from "./appStyles";
-import SideBar from "./common/sideBar/SideBar";
-import BasketList from "./screens/shopBasket/BasketList";
+import BasketList from "./routes/BasketList";
 import PopupDelete from "./popups/popupDelete/PopupDelete";
-import Search from "./common/search/Search";
 import ProductApi from "./api/productApi/ProductApi";
-import Profile from "./screens/profile/Profile";
-import Friend from "./screens/friend/Friend";
+import Profile from "./routes/Profile";
+import Friend from "./routes/Friend";
+import Navbar from "./common/Navbar";
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useTypedSelector((state) => state.auth.user);
   const isOpenDelete = useTypedSelector((state) => state.popups.isOpenDelete);
-  const currentPath = useLocation();
 
   const getUser = async (userID: number) => {
     try {
@@ -53,41 +49,14 @@ function App() {
     }
   }, [user]);
 
-  const handleLogOut = () => {
-    dispatch(onLogin(null));
-    localStorage.clear();
-  };
+
   console.log("user", user);
   return (
     <>
       <AllPagesWrapper isLogined={!!user}>
         {!!user ? (
           <Header>
-            <HeaderLinks isBold={false}>
-              <SideBar />
-            </HeaderLinks>
-            <HeaderLinks
-              isBold={true}
-              isActive={currentPath.pathname === "/home"}
-            >
-              <Link to={"/home"}>Home</Link>
-            </HeaderLinks>
-            <HeaderLinks
-              isBold={true}
-              isActive={currentPath.pathname === "/shopBasket"}
-            >
-              <Link to={"/shopBasket"}>Basket</Link>
-            </HeaderLinks>
-            <Search />
-            <HeaderLinks
-              isBold={true}
-              isActive={currentPath.pathname === "/profile"}
-            >
-              <Link to={"/profile"}>Profile</Link>
-            </HeaderLinks>
-            <HeaderLinks isBold={true} onClick={() => handleLogOut()}>
-              LogOut
-            </HeaderLinks>
+            <Navbar/>
           </Header>
         ) : (
           <Header>

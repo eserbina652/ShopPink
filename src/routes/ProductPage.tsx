@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { CategoryListWrap } from "../categoryList/styles";
-import { AllProductWrap, Image, ImageWrap, ProductWrap } from "./styles";
-import { RegistrationsButton } from "../Registration/styles/loginStyles";
-import { onAdd, onIncreace, onSave } from "../../store/reducers/basket";
+import { CategoryListWrap } from "../screens/categoryList/styles";
+import { AllProductWrap, Image, ImageWrap, ProductWrap } from "../screens/productPage/styles";
+import { RegistrationsButton } from "../screens/Registration/styles/loginStyles";
+import { onAdd, onIncreace, onSave } from "../store/reducers/basket";
 import { useDispatch } from "react-redux";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 
 const ProductPage = () => {
   const { state: product } = useLocation();

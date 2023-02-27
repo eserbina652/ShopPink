@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
-import AuthApi from "../../api/usersApi/usersApi";
+import AuthApi from "../api/usersApi/usersApi";
 import { Formik, FormikHelpers } from "formik";
-import { signupSchema } from "../../validation/validation";
-import Error from "../../error/Error";
+import { signupSchema } from "../validation/validation";
+import Error from "../error/Error";
 
 import {
   Form,
   Inputs,
   LoginWrapper,
   RegistrationsButton,
-} from "./styles/loginStyles";
+} from "../screens/Registration/styles/loginStyles";
 import { useDispatch } from "react-redux";
-import { onLogin } from "../../store/reducers/auth";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
+import { onLogin } from "../store/reducers/auth";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useNavigate } from "react-router-dom";
-import { ILoginForm } from "../../ entities/auth/interfase";
-import { AllPagesWrapper } from "../../appStyles";
+import { ILoginForm } from "../ entities/auth/interfase";
+import { AllPagesWrapper } from "../appStyles";
 
 export const Registration = () => {
   const dispatch = useDispatch();

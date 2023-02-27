@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import AboutUser from "./additionalInformation/AboutUser";
-import UserActivity from "./additionalInformation/UserActivity";
-import ProductApi from "../../api/productApi/ProductApi";
-import { ISearchedPost } from "./types/types";
-import { ActivityPageWrap, PostsHeader } from "./styles";
-import { Nullable } from "../../utils/types";
+import AboutUser from "../screens/friend/additionalInformation/AboutUser";
+import UserActivity from "../screens/friend/additionalInformation/UserActivity";
+import ProductApi from "../api/productApi/ProductApi";
+import { ISearchedPost } from "../screens/friend/types/types";
+import { ActivityPageWrap, PostsHeader } from "../screens/friend/styles";
+import { Nullable } from "../utils/types";
 
 const Friend = () => {
   const { state: user } = useLocation();
